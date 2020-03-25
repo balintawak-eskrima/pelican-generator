@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="{% block html_lang %}{{ DEFAULT_LANG }}{% endblock html_lang %}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/static/css/app.css">
+    <title>Base Template</title>
+</head>
+<body>
+
+<div class="header">
+    <div class="header__outer by-fit">
+        .headerr
+    </div>
+</div>
+
+<div class="main-wrapper">
+    <div class="headline">
+        <div class="headline__outer">
+            <div class="headline__inner">
+                <div class="headline__content">
+                    <h1>.headline</h1>
+                    <i>.headline description short</i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content by-fit">
+        <div class="content-entry">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    .footer
+</div>
+
+<!-- Javascript's -->
+<script type="text/javascript" src="/static/js/runtime.js"></script>
+<script type="text/javascript" src="/static/js/app.js"></script>
+</body>
+</html>

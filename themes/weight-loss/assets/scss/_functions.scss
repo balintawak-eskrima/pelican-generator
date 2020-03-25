@@ -1,0 +1,20 @@
+
+@function color-onyx($opacity: 1) {
+  @return rgba(52, 56, 65, $opacity);
+}
+
+@function color-charcoal($opacity: 1) {
+  @return rgba(46, 62, 83, $opacity);
+}
+
+@function color-tiffany-blue($opacity: 1) {
+  @return rgba(1, 180, 189, $opacity);
+}
+
+@function color-sonic-silver($opacity: 1) {
+  @return rgba(117, 118, 121, $opacity);
+}
+
+@function color-paynes-gray($opacity: 1) {
+  @return rgba(88, 103, 123, $opacity);
+}

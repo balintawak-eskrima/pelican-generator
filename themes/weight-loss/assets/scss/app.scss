@@ -1,0 +1,12 @@
+$fa-font-path: '../../fonts/fontawesome';
+
+@import "fontawesome/fontawesome";
+@import "fontawesome/regular";
+@import "fontawesome/solid";
+
+@import "_modern-reset.scss";
+
+
+body {
+  background-color: pink;
+}

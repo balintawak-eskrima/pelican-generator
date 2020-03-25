@@ -1,0 +1,296 @@
+@import "~bootstrap/scss/bootstrap-reboot.scss";
+@import "mixins";
+@import "functions";
+
+
+// foundations
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+.app {
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  flex-shrink: 0;
+}
+
+.main {
+  flex: 1 0 auto;
+}
+
+.footer {
+  background-color: lightsalmon;
+  flex-shrink: 0;
+}
+
+.by-fit {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 20px;
+  @include tablet-up {
+    max-width: 100%;
+  }
+}
+
+.content-entry {
+  padding: 4rem 0;
+}
+
+.section-head {
+  text-align: center;
+  overflow: hidden;
+  margin: 1rem 0;
+
+  &:before, &:after {
+    content: "";
+    display: inline-block;
+    position: relative;
+    background-color: black;
+    height: 1px;
+    width: 50%;
+    vertical-align: middle;
+  }
+
+  &:before {
+    margin-left: -50%;
+    right: 1rem;
+  }
+
+  &:after {
+    margin-right: -50%;
+    left: 1rem;
+  }
+}
+
+// header
+
+.header {
+  position: fixed;
+  width: 100%;
+  background: transparent;
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 9999;
+  @include tablet-up {
+    background-color: rgba(52, 56, 65, 0.9);
+    position: relative;
+  }
+  transition: background-color .2s ease-in-out;
+}
+
+.header-on-scroll {
+  background-color: rgba(52, 56, 65, 0.9);
+  height: 60px;
+}
+
+.header-inner {
+  height: 90px;
+}
+
+
+// headline
+
+.headline-outer {
+  background-image: url(/static/images/header-max.jpg);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  padding-top: 90px;
+  text-align: center;
+  color: white;
+
+  @include mobile-up {
+    padding-top: 0;
+  }
+}
+
+.headline-inner {
+  @include mobile-up {
+    padding: 20px;
+  }
+
+  &:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 360px;
+
+    @include mobile-up {
+      display: none;
+    }
+  }
+}
+
+.intro {
+  display: inline-block;
+}
+
+.separator-1 {
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+  border-top: 1px solid color-sonic-silver(.3);
+}
+
+.separator-2 {
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+  border-top: 1px solid color-sonic-silver(.3);
+}
+
+
+// common post
+
+.post-date {
+  color: color-sonic-silver(.5);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: .7rem;
+  font-weight: bold;
+}
+
+.post-title {
+  color: color-onyx();
+}
+
+.post-content {
+  color: color-sonic-silver();
+}
+
+
+// single post
+
+.single {
+  .post-img-wrapper {
+    width: 60%;
+    margin: 1rem auto;
+    padding-bottom: 1rem;
+    img {
+      object-fit: contain;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .post-date {
+  }
+  .post-title {
+    margin-bottom: 1rem;
+  }
+
+  .post-content {
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+  }
+}
+
+
+// archive post
+
+.archives {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+
+  .post-img-wrapper {
+    flex-basis: 25%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+
+    .post-img {
+      display: block;
+      position: relative;
+
+      &:before {
+        content: '';
+        display: block;
+        width: 100%;
+        padding-top: (1 / 1) * 100%;
+      }
+
+      img {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      @include mobile-up() {
+        width: 50%;
+        margin: 0 auto;
+      }
+    }
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+
+    @include mobile-up {
+      flex-basis: 100%;
+    }
+  }
+
+  .post-content {
+    flex-basis: 75%;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+
+    @include mobile-up {
+      flex-basis: 100%;
+      text-align: center;
+    }
+  }
+}
+
+
+// tile posts
+
+.tile-posts {
+  display: flex;
+  flex-flow: row wrap;
+
+  .post.tile {
+    flex-basis: 50%;
+    .post-img-wrapper {
+
+      .post-img {
+        display: block;
+        position: relative;
+
+        &:before {
+          content: '';
+          display: block;
+          width: 100%;
+          padding-top: (1 / 1) * 100%;
+        }
+
+        img {
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
