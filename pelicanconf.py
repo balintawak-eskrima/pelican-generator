@@ -95,11 +95,11 @@ YEAR_ARCHIVE_SAVE_AS = 'archives/{date:%Y}/index.html'
 ARCHIVES_SAVE_AS = 'archives/index.html'
 """
 
-DEFAULT_PAGINATION = 3
+DEFAULT_PAGINATION = 4  # per-page
 
 PAGINATION_PATTERNS = (
     (1, '{url}', '{save_as}'),
-    (2, '{base_name}/{number}/', '{base_name}/{number}/index.html'),
+    (2, '{base_name}/page/{number}/', '{base_name}/page/{number}/index.html'),
 )
 
 STATIC_PATHS = [

@@ -4,8 +4,6 @@
 .venv/
 fork_library/
 node_modules/
-content/articles/*
-content/media/*
 content/static/*
 tests/
 
