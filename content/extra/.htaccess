@@ -1,0 +1,5 @@
+<IfModule mod_headers.c>
+    <Files "sitemap.xml.gz">
+        Header set Content-Type: application/xml
+    </Files>
+</IfModule>

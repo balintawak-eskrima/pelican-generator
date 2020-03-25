@@ -1,0 +1,14 @@
+blinker==1.4
+docutils==0.16
+feedgenerator==1.9.1
+Jinja2==2.11.1
+Markdown==3.2.1
+MarkupSafe==1.1.1
+-e git+https://github.com/balintawak-eskrima/pelican#egg=pelican
+Pygments==2.6.1
+python-dateutil==2.8.1
+pytz==2019.3
+PyYAML==5.3
+six==1.14.0
+tzlocal==2.0.0
+Unidecode==1.1.1
